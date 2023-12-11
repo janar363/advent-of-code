@@ -5,16 +5,19 @@
 
 using namespace std;
 
-vector<vector<char> > init_universe;
-vector<vector<long long> > cost;
-unordered_map<long long, pair<long long, long long> > coods;
-long long gal_c = 0;
+vector<vector<char> > init_universe; 
+vector<vector<long long> > cost; // cost to traverse each node
+unordered_map<long long, pair<long long, long long> > coods; // coodinates of each galaxy in universe
+long long gal_c = 0; // total galaxy count
 
+// expands universe by replacing empty rows and empty cols by the size passed through expand_by value
+// insted of actually expanding the universe vector just incease the cost to travesing across nodes by the expand_by value 
 void expand_universe(int expand_by){
     cost = vector<vector<long long> >(init_universe.size(), vector<long long>(init_universe[0].size(), 1));
     vector<bool> empty_row(init_universe.size(), true);
     vector<bool> empty_col(init_universe[0].size(), true);
 
+    // finding empty rows
     for(long long r=0; r < init_universe.size(); r++){
         for(long long c=0; c < init_universe[0].size(); c++){
 
@@ -25,10 +28,7 @@ void expand_universe(int expand_by){
         }
     }   
 
-
-
-    // vector<char> empty(init_universe[0].size(), '.');
-    // int rows_inserted = 0;
+    // finding empty cols
     for(long long i=0; i<empty_row.size(); i++){
         bool empty_r = empty_row[i];
         if(empty_r) {
@@ -38,7 +38,7 @@ void expand_universe(int expand_by){
         }
     }
 
-    // int cols_inserted = 0;
+    // expanding universe by updating cost
     for(long long i=0; i<empty_col.size(); i++){
         bool empty_c = empty_col[i];
         if(empty_c) {
@@ -60,6 +60,7 @@ void fetch_coods(){
     }
 }
 
+// calculating total distances between each pair of glaxcies
 long long dist_sum(){
     long long total_dist = 0;
 
@@ -103,6 +104,7 @@ int main(){
     string line;
     long long line_c=0;
     
+    // get input
     while(getline(file, line)){
 
         if(line.empty()) {
@@ -121,12 +123,14 @@ int main(){
         line_c++;
     }
 
-
+    // fetch coodinates of galaxies
     fetch_coods();
 
+    // expaning universe for problem 1
     expand_universe(2);
     cout << "total distance for expand_by(" << 2 << ") = " << dist_sum() << endl;
 
+    // expanding universe for problem 2
     expand_universe(1000000);
     cout << "total distance for expand_by(" << 1000000 << ") = " << dist_sum() << endl;
 }
