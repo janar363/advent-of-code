@@ -30,7 +30,7 @@ bool compare(pair<string, long long> left, pair<string, long long> right){
 
 int main(){
 
-    std::ifstream file("day7.txt");
+    std::ifstream file("aoc_py/input");
 
     scores['A'] = 14;
     scores['K'] = 13;

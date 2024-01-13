@@ -5,7 +5,7 @@
 using namespace std;
 
 vector<string> inp;
-vector<string> inp_c;
+vector<string> inp_c; // copy of input
 vector<vector<long long> > steps;
 unordered_map<string, int> hash_map;
 
@@ -13,7 +13,7 @@ void fetch_data(){
     ifstream file("day14.txt");
 
     string line;
-    // int lc= 0;
+
     while(getline(file, line)){
         if(line.empty()) break;
 
