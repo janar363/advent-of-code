@@ -1,0 +1,107 @@
+entered ^ if
+entered ^ if
+entered ^ if
+entered ^ if
+entered ^ if
+entered ^ if
+change direction to  >
+entered > if
+entered > if
+entered > if
+entered > if
+entered > if
+entered V if
+entered V if
+entered V if
+entered V if
+entered V if
+entered V if
+entered < if for pos  (6, 8)
+entered < if for pos  (6, 7)
+entered < if for pos  (6, 6)
+entered < if for pos  (6, 5)
+entered < if for pos  (6, 4)
+entered < if for pos  (6, 3)
+entered < if for pos  (6, 2)
+entered ^ if
+entered ^ if
+entered ^ if
+change direction to  >
+entered > if
+entered > if
+entered > if
+entered > if
+entered > if
+entered V if
+entered V if
+entered V if
+entered V if
+entered V if
+entered < if for pos  (8, 6)
+entered < if for pos  (8, 5)
+entered < if for pos  (8, 4)
+entered < if for pos  (8, 3)
+entered < if for pos  (8, 2)
+entered < if for pos  (8, 1)
+entered ^ if
+entered ^ if
+change direction to  >
+entered > if
+entered > if
+entered > if
+entered > if
+entered > if
+entered > if
+entered > if
+entered V if
+entered V if
+entered V if
+part1 :  41
+------------------------------
+for block position  (3, 4)
+loop found
+for block position  (4, 3)
+for block position  (5, 4)
+for block position  (4, 6)
+for block position  (8, 3)
+for block position  (8, 6)
+for block position  (1, 6)
+for block position  (2, 8)
+for block position  (7, 4)
+for block position  (6, 2)
+for block position  (7, 1)
+for block position  (7, 7)
+for block position  (6, 5)
+for block position  (6, 8)
+for block position  (4, 2)
+for block position  (4, 5)
+for block position  (5, 6)
+for block position  (4, 8)
+loop found
+for block position  (8, 2)
+for block position  (9, 7)
+for block position  (8, 5)
+for block position  (2, 4)
+for block position  (1, 5)
+for block position  (1, 8)
+loop found
+for block position  (7, 3)
+for block position  (6, 7)
+for block position  (7, 6)
+for block position  (5, 2)
+for block position  (4, 4)
+for block position  (3, 8)
+for block position  (8, 4)
+for block position  (5, 8)
+loop found
+for block position  (8, 1)
+for block position  (8, 7)
+for block position  (1, 4)
+for block position  (1, 7)
+loop found
+for block position  (7, 2)
+for block position  (6, 6)
+loop found
+for block position  (7, 5)
+for block position  (6, 3)
+part2  6
