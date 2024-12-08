@@ -16,17 +16,17 @@ with open('input') as file:
 part1 = set()
 
 for a1 in range(len(antenas)):
-            for a2 in range(a1+1, len(antenas)):
-                if grid[antenas[a1][0]][antenas[a1][1]] != grid[antenas[a2][0]][antenas[a2][1]]:
-                    continue
+    for a2 in range(a1+1, len(antenas)):
+        if grid[antenas[a1][0]][antenas[a1][1]] != grid[antenas[a2][0]][antenas[a2][1]]:
+            continue
 
-                dr = antenas[a1][0] - antenas[a2][0]
-                dc = antenas[a1][1] - antenas[a2][1]
+        dr = antenas[a1][0] - antenas[a2][0]
+        dc = antenas[a1][1] - antenas[a2][1]
 
-                if 0 <= antenas[a1][0] + dr < len(grid) and 0 <= antenas[a1][1] + dc < len(grid[0]): 
-                     part1.add((antenas[a1][0] + dr, antenas[a1][1] + dc))
-                if 0 <= antenas[a2][0] - dr < len(grid) and 0 <= antenas[a2][1] - dc < len(grid[0]): 
-                     part1.add((antenas[a2][0] - dr, antenas[a2][1] - dc))
+        if 0 <= antenas[a1][0] + dr < len(grid) and 0 <= antenas[a1][1] + dc < len(grid[0]): 
+             part1.add((antenas[a1][0] + dr, antenas[a1][1] + dc))
+        if 0 <= antenas[a2][0] - dr < len(grid) and 0 <= antenas[a2][1] - dc < len(grid[0]): 
+             part1.add((antenas[a2][0] - dr, antenas[a2][1] - dc))
 
 print(len(part1))
 
